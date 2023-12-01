@@ -24,7 +24,10 @@ Ver la temperatura, Ver la distancia del sensor, ver el contador y modificar los
 Se muestra lo pedido en cada unode los casos por el LCD y se va actualizando mientras se va mostrando en el LCD.
 
 # Interrupciones:
-Si se pulsa el botón entre 2 y 3 segundos se vuelve al estado 1 y si se pulsa durante más de 5 segundos al estado 3. Para ello el botón tiene que estar en el pin 3 del arduino UNO que es uno de los pines designados para las interrpuciones y se calcula el tiempo cuando se cambia de alto a bajo y luego cuando pasa de bajo a alto, de ahí se hcae la resta y se calcula si pasar a un estado u otro.
+Si se pulsa el botón entre 2 y 3 segundos se vuelve al estado 1 y si se pulsa durante más de 5 segundos al estado 3. Para ello el botón tiene que estar en el pin 3 del arduino UNO que es uno de los pines designados para las interrpuciones y se calcula el tiempo cuando se cambia de alto a bajo y luego cuando pasa de bajo a alto, de ahí se hace la resta y se calcula si pasar a un estado u otro.
+
+# Contador:
+Para el contador he usado threads que se ejecutan cada segundo y lo único que hace ese thread es incrementar en 1 el contador.
 
 # Problemas al hacer la práctica:
 Para hacer las máquinas de estado y las selecciones de los menús estaba usando switch case, pero me di cuenta al incluir la interrupción que se liaba y tuve que cambiar a if else anidados.
